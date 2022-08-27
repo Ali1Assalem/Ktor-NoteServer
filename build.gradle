@@ -39,6 +39,7 @@ dependencies {
     implementation "io.ktor:ktor-gson:$ktor_version"
     testImplementation "io.ktor:ktor-server-tests:$ktor_version"
 
+    implementation "io.ktor:ktor-locations:$ktor_version"
 
     implementation "org.jetbrains.exposed:exposed-core:$exposed_version"
     implementation "org.jetbrains.exposed:exposed-dao:$exposed_version"
