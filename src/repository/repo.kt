@@ -1,6 +1,5 @@
 package com.example.repository
 
-
 import com.example.data.model.Note
 import com.example.data.model.User
 import com.example.data.table.NoteTable
@@ -86,9 +85,9 @@ class Repo {
 
     }
 
-    suspend fun deleteNote(id:String){
+    suspend fun deleteNote(id:String,email: String){
         dbQuery {
-            NoteTable.deleteWhere { NoteTable.id.eq(id) }
+            NoteTable.deleteWhere { NoteTable.userEmail.eq(email) and NoteTable.id.eq(id) }
         }
     }
 
