@@ -31,14 +31,12 @@ class NoteUpdateRoute
 class NoteDeleteRoute
 
 
-
-
 fun Route.NoteRoutes(
     db:Repo,
     hashFunction: (String)->String
 ) {
-
     authenticate("jwt"){
+
 
         post<NoteCreateRoute>{
 
@@ -120,20 +118,6 @@ fun Route.NoteRoutes(
             }
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
